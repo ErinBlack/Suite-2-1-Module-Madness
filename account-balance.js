@@ -6,12 +6,10 @@ var minNumber = 100;
 var maxNumber = 1000000;
 var testNumber = 20000;
 
+exports.accountBalance = function (){
+  return money(randomNumber(minNumber, maxNumber));
+};
 
-
-http.createServer(function(req, res){
-// res.write(randomNumber(minNumber, maxNumber));
-res.write(accountBalance.accountBalanceTitle());
-res.write(money(randomNumber(minNumber, maxNumber)));
-
-res.end();
-}).listen(3000);
+ exports.accountBalanceTitle = function(){
+  return 'Account balance: \n';
+};
